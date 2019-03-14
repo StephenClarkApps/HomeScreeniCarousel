@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" id="gTV-IL-0wX" customClass="CollectionViewCell" customModule="iCarosealSwiftExample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="500" height="600"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="500" height="600"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="qeh-Lr-BOy" customClass="iCarousel">
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="600"/>
+                        <connections>
+                            <outlet property="dataSource" destination="gTV-IL-0wX" id="2QT-nJ-WCZ"/>
+                            <outlet property="delegate" destination="gTV-IL-0wX" id="rS2-ax-t1w"/>
+                        </connections>
+                    </view>
+                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="4WJ-Sj-IgW">
+                        <rect key="frame" x="214.5" y="563" width="71" height="37"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="37" id="Imi-YT-Kd8"/>
+                            <constraint firstAttribute="height" constant="37" id="bhS-sz-fzk"/>
+                        </constraints>
+                        <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="currentPageIndicatorTintColor" red="0.09960424155" green="0.49178421500000002" blue="0.99889284369999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </pageControl>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="qeh-Lr-BOy" secondAttribute="bottom" id="AJZ-3W-IEd"/>
+                <constraint firstItem="4WJ-Sj-IgW" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Kch-W7-Ajs"/>
+                <constraint firstItem="qeh-Lr-BOy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="OlW-oh-FJk"/>
+                <constraint firstItem="qeh-Lr-BOy" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="WKD-9v-S74"/>
+                <constraint firstAttribute="trailing" secondItem="qeh-Lr-BOy" secondAttribute="trailing" id="bQp-ut-9nN"/>
+                <constraint firstAttribute="bottom" secondItem="4WJ-Sj-IgW" secondAttribute="bottom" id="dcM-EU-emv"/>
+                <constraint firstItem="qeh-Lr-BOy" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="eIr-eR-Lu0"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="304" height="342"/>
+            <connections>
+                <outlet property="carousel" destination="qeh-Lr-BOy" id="AS1-UV-VMo"/>
+                <outlet property="pageControl" destination="4WJ-Sj-IgW" id="IDV-6c-ecJ"/>
+            </connections>
+            <point key="canvasLocation" x="340.80000000000001" y="252.77361319340332"/>
+        </collectionViewCell>
+    </objects>
+</document>
