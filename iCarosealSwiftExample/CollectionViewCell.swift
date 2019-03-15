@@ -23,6 +23,10 @@ class CollectionViewCell: UICollectionViewCell, iCarouselDataSource, iCarouselDe
         carousel.dataSource = self
         carousel.delegate = self
         
+        carousel.decelerationRate = 1.5
+        carousel.bounces = false
+        carousel.stopAtItemBoundary = true
+        
         images = NSMutableArray(array: ["4268.jpg",
                                         "4270.jpg",
                                         "4272.jpg",
