@@ -61,7 +61,7 @@ class CollectionViewCell: UICollectionViewCell, iCarouselDataSource, iCarouselDe
         }
         
         // Add the Timer add to runloop ??
-        RunLoop.current.add(self.timer, forMode: .commonModes)
+        RunLoop.current.add(self.timer, forMode: RunLoop.Mode.common)
     }
     
     //MARK: icarousel delegate methods
