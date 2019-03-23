@@ -76,6 +76,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		86FD1BD62246A329000F9BDD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA2263C51B7B1516003F5E37 /* Main.storyboard */,
+				EACEDA031B7C5E8800E3C681 /* ImageDisplayViewController.swift */,
+				867BFCD5223A627C000E69B6 /* CollectViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		86FD1BD82246A38C000F9BDD /* iCarouselCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				867BFCD1223A5E4F000E69B6 /* CollectionViewCell.swift */,
+				867BFCD2223A5E4F000E69B6 /* CollectionViewCell.xib */,
+			);
+			path = iCarouselCollectionViewCell;
+			sourceTree = "<group>";
+		};
 		EA2263B31B7B1516003F5E37 = {
 			isa = PBXGroup;
 			children = (
@@ -97,18 +116,10 @@
 		EA2263BE1B7B1516003F5E37 /* iCarosealSwiftExample */ = {
 			isa = PBXGroup;
 			children = (
-				867BFCD1223A5E4F000E69B6 /* CollectionViewCell.swift */,
-				867BFCD2223A5E4F000E69B6 /* CollectionViewCell.xib */,
-				EA2263C11B7B1516003F5E37 /* AppDelegate.swift */,
-				EACEDA031B7C5E8800E3C681 /* ImageDisplayViewController.swift */,
-				EA2263C51B7B1516003F5E37 /* Main.storyboard */,
-				867BFCD5223A627C000E69B6 /* CollectViewController.swift */,
-				EA2263C81B7B1516003F5E37 /* Images.xcassets */,
-				EA2263CA1B7B1516003F5E37 /* LaunchScreen.xib */,
-				EA2263E51B7B1684003F5E37 /* iCarosealSwiftExample-Bridging-Header.h */,
-				EACED9EE1B7C53A100E3C681 /* images */,
+				86FD1BD82246A38C000F9BDD /* iCarouselCollectionViewCell */,
 				EA2263E11B7B159A003F5E37 /* iCarousel */,
 				EA2263BF1B7B1516003F5E37 /* Supporting Files */,
+				86FD1BD62246A329000F9BDD /* View */,
 			);
 			path = iCarosealSwiftExample;
 			sourceTree = "<group>";
@@ -116,6 +127,11 @@
 		EA2263BF1B7B1516003F5E37 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EA2263C11B7B1516003F5E37 /* AppDelegate.swift */,
+				EA2263E51B7B1684003F5E37 /* iCarosealSwiftExample-Bridging-Header.h */,
+				EA2263CA1B7B1516003F5E37 /* LaunchScreen.xib */,
+				EA2263C81B7B1516003F5E37 /* Images.xcassets */,
+				EACED9EE1B7C53A100E3C681 /* images */,
 				EA2263C01B7B1516003F5E37 /* Info.plist */,
 			);
 			name = "Supporting Files";

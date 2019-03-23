@@ -15,28 +15,28 @@ class CollectionViewCell: UICollectionViewCell, iCarouselDataSource, iCarouselDe
     @IBOutlet weak var pageControl: UIPageControl!
     
     override func prepareForReuse() {
-        // Refresh
+        // Ensure cells are refreshed ??
+        self.images = NSMutableArray()
     }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        carousel.dataSource = self
-        carousel.delegate = self
+        self.carousel.dataSource = self
+        self.carousel.delegate = self
         
-        carousel.decelerationRate = 1.5
-        carousel.bounces = false
-        carousel.stopAtItemBoundary = true
+        self.carousel.decelerationRate = 1.5
+        self.carousel.bounces = false
+        self.carousel.stopAtItemBoundary = true
         
-        images = NSMutableArray(array: ["4268.jpg",
+        self.images = NSMutableArray(array: ["4268.jpg",
                                         "4270.jpg",
                                         "4272.jpg",
                                         "4275.jpg",
                                         "4277.jpg"])
         
-        //vwCarousel.type = iCarouselType.coverFlow2
         self.carousel.type = iCarouselType.rotary
-        //self.carousel.type = iCarouselType.invertedCylinder
-        self.carousel .reloadData()
+        self.carousel.reloadData()
         // Do any additional setup after loading the view, typically from a nib.
         
         let timer = Timer.scheduledTimer(withTimeInterval: 10.0, repeats: true) { timer in
@@ -79,7 +79,7 @@ class CollectionViewCell: UICollectionViewCell, iCarouselDataSource, iCarouselDe
     
     func carouselCurrentItemIndexDidChange(_ carousel: iCarousel) {
         print ("carouselCurrentItemIndexDidChange to \(carousel.currentItemIndex)")
-        pageControl.currentPage = carousel.currentItemIndex
+        self.pageControl.currentPage = carousel.currentItemIndex
     }
 
 }
