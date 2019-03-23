@@ -43,13 +43,13 @@
 		867BFCD9223A7649000E69B6 /* 4277.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4277.jpg; sourceTree = "<group>"; };
 		867BFCDA223A764A000E69B6 /* 4275.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4275.jpg; sourceTree = "<group>"; };
 		867BFCDB223A764A000E69B6 /* 4270.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4270.jpg; sourceTree = "<group>"; };
-		EA2263BC1B7B1516003F5E37 /* iCarosealSwiftExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCarosealSwiftExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA2263BC1B7B1516003F5E37 /* iCarosealInACollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCarosealInACollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA2263C01B7B1516003F5E37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA2263C11B7B1516003F5E37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA2263C61B7B1516003F5E37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA2263C81B7B1516003F5E37 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EA2263CB1B7B1516003F5E37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		EA2263D11B7B1516003F5E37 /* iCarosealSwiftExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iCarosealSwiftExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA2263D11B7B1516003F5E37 /* iCarosealInACollectionViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iCarosealInACollectionViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA2263D61B7B1516003F5E37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA2263D71B7B1516003F5E37 /* iCarosealSwiftExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCarosealSwiftExampleTests.swift; sourceTree = "<group>"; };
 		EA2263E21B7B159A003F5E37 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
@@ -88,8 +88,8 @@
 		EA2263BD1B7B1516003F5E37 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EA2263BC1B7B1516003F5E37 /* iCarosealSwiftExample.app */,
-				EA2263D11B7B1516003F5E37 /* iCarosealSwiftExampleTests.xctest */,
+				EA2263BC1B7B1516003F5E37 /* iCarosealInACollectionView.app */,
+				EA2263D11B7B1516003F5E37 /* iCarosealInACollectionViewTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -163,9 +163,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EA2263BB1B7B1516003F5E37 /* iCarosealSwiftExample */ = {
+		EA2263BB1B7B1516003F5E37 /* iCarosealInACollectionView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EA2263DB1B7B1516003F5E37 /* Build configuration list for PBXNativeTarget "iCarosealSwiftExample" */;
+			buildConfigurationList = EA2263DB1B7B1516003F5E37 /* Build configuration list for PBXNativeTarget "iCarosealInACollectionView" */;
 			buildPhases = (
 				EA2263B81B7B1516003F5E37 /* Sources */,
 				EA2263B91B7B1516003F5E37 /* Frameworks */,
@@ -175,14 +175,14 @@
 			);
 			dependencies = (
 			);
-			name = iCarosealSwiftExample;
+			name = iCarosealInACollectionView;
 			productName = iCarosealSwiftExample;
-			productReference = EA2263BC1B7B1516003F5E37 /* iCarosealSwiftExample.app */;
+			productReference = EA2263BC1B7B1516003F5E37 /* iCarosealInACollectionView.app */;
 			productType = "com.apple.product-type.application";
 		};
-		EA2263D01B7B1516003F5E37 /* iCarosealSwiftExampleTests */ = {
+		EA2263D01B7B1516003F5E37 /* iCarosealInACollectionViewTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EA2263DE1B7B1516003F5E37 /* Build configuration list for PBXNativeTarget "iCarosealSwiftExampleTests" */;
+			buildConfigurationList = EA2263DE1B7B1516003F5E37 /* Build configuration list for PBXNativeTarget "iCarosealInACollectionViewTests" */;
 			buildPhases = (
 				EA2263CD1B7B1516003F5E37 /* Sources */,
 				EA2263CE1B7B1516003F5E37 /* Frameworks */,
@@ -193,9 +193,9 @@
 			dependencies = (
 				EA2263D31B7B1516003F5E37 /* PBXTargetDependency */,
 			);
-			name = iCarosealSwiftExampleTests;
+			name = iCarosealInACollectionViewTests;
 			productName = iCarosealSwiftExampleTests;
-			productReference = EA2263D11B7B1516003F5E37 /* iCarosealSwiftExampleTests.xctest */;
+			productReference = EA2263D11B7B1516003F5E37 /* iCarosealInACollectionViewTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -216,7 +216,7 @@
 					};
 				};
 			};
-			buildConfigurationList = EA2263B71B7B1516003F5E37 /* Build configuration list for PBXProject "iCarosealSwiftExample" */;
+			buildConfigurationList = EA2263B71B7B1516003F5E37 /* Build configuration list for PBXProject "iCarosealInACollectionView" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -229,8 +229,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EA2263BB1B7B1516003F5E37 /* iCarosealSwiftExample */,
-				EA2263D01B7B1516003F5E37 /* iCarosealSwiftExampleTests */,
+				EA2263BB1B7B1516003F5E37 /* iCarosealInACollectionView */,
+				EA2263D01B7B1516003F5E37 /* iCarosealInACollectionViewTests */,
 			);
 		};
 /* End PBXProject section */
@@ -287,7 +287,7 @@
 /* Begin PBXTargetDependency section */
 		EA2263D31B7B1516003F5E37 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EA2263BB1B7B1516003F5E37 /* iCarosealSwiftExample */;
+			target = EA2263BB1B7B1516003F5E37 /* iCarosealInACollectionView */;
 			targetProxy = EA2263D21B7B1516003F5E37 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -438,7 +438,7 @@
 				INFOPLIST_FILE = iCarosealSwiftExampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iCarosealSwiftExample.app/iCarosealSwiftExample";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iCarosealInACollectionView.app/iCarosealInACollectionView";
 			};
 			name = Debug;
 		};
@@ -453,14 +453,14 @@
 				INFOPLIST_FILE = iCarosealSwiftExampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iCarosealSwiftExample.app/iCarosealSwiftExample";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iCarosealInACollectionView.app/iCarosealInACollectionView";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EA2263B71B7B1516003F5E37 /* Build configuration list for PBXProject "iCarosealSwiftExample" */ = {
+		EA2263B71B7B1516003F5E37 /* Build configuration list for PBXProject "iCarosealInACollectionView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA2263D91B7B1516003F5E37 /* Debug */,
@@ -469,7 +469,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EA2263DB1B7B1516003F5E37 /* Build configuration list for PBXNativeTarget "iCarosealSwiftExample" */ = {
+		EA2263DB1B7B1516003F5E37 /* Build configuration list for PBXNativeTarget "iCarosealInACollectionView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA2263DC1B7B1516003F5E37 /* Debug */,
@@ -478,7 +478,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EA2263DE1B7B1516003F5E37 /* Build configuration list for PBXNativeTarget "iCarosealSwiftExampleTests" */ = {
+		EA2263DE1B7B1516003F5E37 /* Build configuration list for PBXNativeTarget "iCarosealInACollectionViewTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA2263DF1B7B1516003F5E37 /* Debug */,
