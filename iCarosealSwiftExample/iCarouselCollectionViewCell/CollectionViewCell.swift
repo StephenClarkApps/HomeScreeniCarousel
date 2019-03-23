@@ -8,15 +8,24 @@
 
 import UIKit
 
+struct ImageAndAction {
+    let image: UIImage
+    let action: String?
+}
+
 class CollectionViewCell: UICollectionViewCell, iCarouselDataSource, iCarouselDelegate {
-    var images: NSMutableArray = NSMutableArray()
+    // Allow initialization with an array of image names
+    var theImageNames: [String] = []
+    
+    // Should be able to initialise the cell type with images and optional "Actions" or segue identifiers
+    var imagesAndAction: [ImageAndAction]?
     
     @IBOutlet weak var carousel: iCarousel!
     @IBOutlet weak var pageControl: UIPageControl!
     
     override func prepareForReuse() {
         // Ensure cells are refreshed ??
-        self.images = NSMutableArray()
+        self.theImageNames = []
     }
     
     override func awakeFromNib() {
@@ -28,12 +37,12 @@ class CollectionViewCell: UICollectionViewCell, iCarouselDataSource, iCarouselDe
         self.carousel.decelerationRate = 1.5
         self.carousel.bounces = false
         self.carousel.stopAtItemBoundary = true
-        
-        self.images = NSMutableArray(array: ["4268.jpg",
-                                        "4270.jpg",
-                                        "4272.jpg",
-                                        "4275.jpg",
-                                        "4277.jpg"])
+
+        self.theImageNames = ["4268.jpg",
+                              "4270.jpg",
+                              "4272.jpg",
+                              "4275.jpg",
+                              "4277.jpg"]
         
         self.carousel.type = iCarouselType.rotary
         self.carousel.reloadData()
@@ -49,12 +58,13 @@ class CollectionViewCell: UICollectionViewCell, iCarouselDataSource, iCarouselDe
     
     //MARK: icarousel delegate methods
     func numberOfItems(in carousel: iCarousel) -> Int {
-        return images.count
+        //return imageNames.count
+        return self.theImageNames.count
     }
     
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
         var itemView: UIImageView
-        let image = UIImage(named: "\(images.object(at: index))")
+        let image = UIImage(named: self.theImageNames[index])
         let screenSize = UIScreen.main.bounds
         if (view == nil) {
             itemView = UIImageView(frame:CGRect(x: self.frame.midX,
@@ -62,13 +72,10 @@ class CollectionViewCell: UICollectionViewCell, iCarouselDataSource, iCarouselDe
                                                 width: screenSize.width,
                                                 height: screenSize.width + 100))
             itemView.contentMode = .scaleAspectFit
-            //itemView.backgroundColor = UIColor.black
         } else {
             itemView = view as! UIImageView;
         }
         itemView.image = image
-        
-        
         return itemView
     }
     
@@ -81,5 +88,4 @@ class CollectionViewCell: UICollectionViewCell, iCarouselDataSource, iCarouselDe
         print ("carouselCurrentItemIndexDidChange to \(carousel.currentItemIndex)")
         self.pageControl.currentPage = carousel.currentItemIndex
     }
-
 }
