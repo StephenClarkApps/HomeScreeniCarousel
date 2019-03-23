@@ -20,12 +20,17 @@ class CollectionViewCell: UICollectionViewCell, iCarouselDataSource, iCarouselDe
     // Should be able to initialise the cell type with images and optional "Actions" or segue identifiers
     var imagesAndAction: [ImageAndAction]?
     
+    var timer = Timer()
+    
     @IBOutlet weak var carousel: iCarousel!
     @IBOutlet weak var pageControl: UIPageControl!
     
     override func prepareForReuse() {
         // Ensure cells are refreshed ??
-        self.theImageNames = []
+        //self.theImageNames = []
+        self.carousel.reloadData()
+        
+        self.timer = Timer()
     }
     
     override func awakeFromNib() {
@@ -34,7 +39,10 @@ class CollectionViewCell: UICollectionViewCell, iCarouselDataSource, iCarouselDe
         self.carousel.dataSource = self
         self.carousel.delegate = self
         
-        self.carousel.decelerationRate = 1.5
+        self.carousel.decelerationRate = 2.0
+        //self.carousel.decelerationRate = 0.0
+        //self.carousel.isPagingEnabled = true
+        
         self.carousel.bounces = false
         self.carousel.stopAtItemBoundary = true
 
@@ -46,14 +54,14 @@ class CollectionViewCell: UICollectionViewCell, iCarouselDataSource, iCarouselDe
         
         self.carousel.type = iCarouselType.rotary
         self.carousel.reloadData()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        let timer = Timer.scheduledTimer(withTimeInterval: 10.0, repeats: true) { timer in
-            print("Timer fired!")
+    
+        // Setup timer
+        self.timer = Timer.scheduledTimer(withTimeInterval: 10.0, repeats: true) { timer in
             self.carousel.scroll(byNumberOfItems: 1, duration: 0.6)
         }
-        // Timer add to runloop
-        RunLoop.current.add(timer, forMode: .commonModes)
+        
+        // Add the Timer add to runloop ??
+        RunLoop.current.add(self.timer, forMode: .commonModes)
     }
     
     //MARK: icarousel delegate methods
@@ -87,5 +95,18 @@ class CollectionViewCell: UICollectionViewCell, iCarouselDataSource, iCarouselDe
     func carouselCurrentItemIndexDidChange(_ carousel: iCarousel) {
         print ("carouselCurrentItemIndexDidChange to \(carousel.currentItemIndex)")
         self.pageControl.currentPage = carousel.currentItemIndex
+    }
+    
+    func carouselWillBeginDragging(_ carousel: iCarousel) {
+        print ("carouselWillBeginDragging")
+        // Stop the timer triggering an paging event during manual dragging
+        self.timer.invalidate()
+    }
+    
+    func carouselDidEndDragging(_ carousel: iCarousel, willDecelerate decelerate: Bool) {
+        // Set the timer back up
+        self.timer = Timer.scheduledTimer(withTimeInterval: 10.0, repeats: true) { timer in
+            self.carousel.scroll(byNumberOfItems: 1, duration: 0.6)
+        }
     }
 }
